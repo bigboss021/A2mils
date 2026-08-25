@@ -2,7 +2,8 @@
    A²MILS AMDK - PRODUCT INTERACTION & DETAIL MODAL
    ========================================================================== */
 
-const BASE = import.meta.env.BASE_URL || '/';
+const BASE = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) ? import.meta.env.BASE_URL : './';
+const prefix = BASE.endsWith('/') ? BASE : BASE + '/';
 
 export const productData = {
   'cup-220ml': {
@@ -16,7 +17,7 @@ export const productData = {
     sni: 'SNI 3553:2015',
     halal: 'Terverifikasi Halal Indonesia',
     shelfLife: '24 Bulan',
-    image: `${BASE}assets/images/cup-220ml.png`,
+    image: `${prefix}assets/images/cup-220ml.png`,
     description: 'A²mils Cup 220ml hadir dengan kemasan gelas plastik food grade steril dan tutup foil rapat anti-bocor. Sangat praktis untuk kebutuhan hajatan, pengajian, katering, rapat kantor, restoran, dan berbagai agenda sosial.',
     highlights: ['Segel Foil Kedap Udara', 'Plastik BPA-Free Higienis', 'Mudah Ditumpuk & Disimpan', 'Ekonomis & Efisien']
   },
@@ -31,7 +32,7 @@ export const productData = {
     sni: 'SNI 3553:2015',
     halal: 'Terverifikasi Halal Indonesia',
     shelfLife: '24 Bulan',
-    image: `${BASE}assets/images/bottle-330ml.png`,
+    image: `${prefix}assets/images/bottle-330ml.png`,
     description: 'Kemasan botol mini yang ringkas dan modern, pas di tangan serta mudah dibawa bepergian. Cocok untuk acara seminar, sajian tamu hotel & resto (Horeca), serta meeting eksekutif.',
     highlights: ['Desain Ergonomis Slim', 'Tutup Segel Pengaman', 'Sangat Pas di Tas Kerja', 'Estetik untuk Meja Rapat']
   },
@@ -46,7 +47,7 @@ export const productData = {
     sni: 'SNI 3553:2015',
     halal: 'Terverifikasi Halal Indonesia',
     shelfLife: '24 Bulan',
-    image: `${BASE}assets/images/bottle-600ml.png`,
+    image: `${prefix}assets/images/bottle-600ml.png`,
     description: 'Varian terfavorit A²mils dengan lekukan grip eksklusif yang nyaman digenggam saat berolahraga, bekerja, maupun perjalanan jarak jauh. Memberikan kesegaran mata air alami pegunungan Kuningan.',
     highlights: ['Grip Bergelombang Anti-Slip', 'Kapasitas Pas Hidrasi Harian', 'Kemasan 100% Recyclable', 'Mata Air Alami Terjaga']
   }
