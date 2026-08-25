@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A²mils | Air Mineral Alami Pegunungan Kuningan - Segar, Murni & Berkhasiat</title>
+  <meta name="description" content="A²mils adalah air mineral pegunungan alami murni dari Gunung Ciremai Kuningan, diproduksi oleh CV. Surya Nedika Isabella dan didistribusikan oleh PT. Tirta Boga Mega Kreasi. Tersedia kemasan cup 220ml, botol 330ml, 600ml & galon 19L.">
+  <meta name="keywords" content="A2mils, Amils, Air Mineral, AMDK, Kuningan, Indramayu, Cirebon, Surya Nedika Isabella, Tirta Boga Mega Kreasi, Air Pegunungan Ciremai, Air Minum Kemasan">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/main.css">
+  <link rel="stylesheet" href="/src/css/components.css">
+  <link rel="stylesheet" href="/src/css/animations.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/logo-a2mils.png">
+</head>
+<body>
+
+  <!-- Ambient Light Effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- =========================================================================
+       NAVIGATION BAR (GLASSMORPHIC)
+       ========================================================================= -->
+  <header class="navbar" id="main-navbar">
+    <div class="container nav-container">
+      <a href="#beranda" class="nav-brand" id="nav-brand-link">
+        <img src="/assets/images/logo-a2mils.png" alt="A²mils Logo" class="nav-logo" id="main-nav-logo">
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links-list">
+          <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+          <li><a href="#tentang" class="nav-link">Tentang Kami</a></li>
+          <li><a href="#proses" class="nav-link">Proses Pemurnian</a></li>
+          <li><a href="#produk" class="nav-link">Produk</a></li>
+          <li><a href="#kalkulator" class="nav-link">Kalkulator Hidrasi</a></li>
+          <li><a href="#sertifikasi" class="nav-link">Legalitas & Kualitas</a></li>
+          <li><a href="#kemitraan" class="nav-link">Kemitraan & Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Ganti Mode Tampilan">
+          <span id="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <a href="#kemitraan" class="nav-cta-btn" id="nav-cta-order-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          Hubungi Sales
+        </a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka Menu Navigasi">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="beranda">
+    <canvas id="water-canvas"></canvas>
+
+    <div class="container hero-grid">
+      <!-- Hero Content -->
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>100% Mata Air Alami Gunung Ciremai</span>
+        </div>
+
+        <h1 class="hero-title">
+          Kemurnian Alami untuk <br>
+          <span class="gradient-text">Hidrasi Sempurna</span> Setiap Hari
+        </h1>
+
+        <p class="hero-description">
+          <strong>A²mils</strong> menghadirkan kesegaran air mineral pegunungan alami yang diproses dengan teknologi filtrasi multi-tahap higienis dan ozonisasi modern. Menjaga keseimbangan mineral alami tubuh dengan rasa segar dan murni.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#produk" class="btn-primary" id="hero-btn-explore">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="10 8 16 12 10 16 10 8"></polygon>
+            </svg>
+            Jelajahi Produk
+          </a>
+
+          <a href="#kemitraan" class="btn-secondary" id="hero-btn-distributor">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Peluang Kemitraan
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-num">pH 7.8</span>
+            <span class="stat-label">Alami & Seimbang</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">7 Tahap</span>
+            <span class="stat-label">Filtrasi & Ozonisasi</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">BPOM & SNI Resmi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-visual-wrapper reveal delay-2">
+        <div class="hero-card-display">
+          <div class="hero-glow-ring"></div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-top-left">
+            <div class="badge-icon">✓</div>
+            <div>
+              <div class="badge-text-title">BPOM RI MD Terdaftar</div>
+              <div class="badge-text-sub">No. 265228006191</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <div class="badge-icon">★</div>
+            <div>
+              <div class="badge-text-title">SNI 3553:2015</div>
+              <div class="badge-text-sub">Jaminan Mutu Nasional</div>
+            </div>
+          </div>
+
+          <img src="/assets/images/bottle-600ml.png" alt="A²mils Botol 600ml" class="hero-product-img" id="hero-showcase-bottle" title="A²mils Air Mineral 600ml">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HIGHLIGHTS STRIP (KEY ADVANTAGES)
+       ========================================================================= -->
+  <section class="highlights-strip">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-card reveal">
+          <div class="highlight-icon-box">💧</div>
+          <div class="highlight-info">
+            <h4>Mata Air Pegunungan</h4>
+            <p>Bersumber langsung dari mata air terlindungi lereng Gunung Ciremai Kuningan.</p>
+          </div>
+        </div>
+
+        <div class="highlight-card reveal delay-1">
+          <div class="highlight-icon-box">🛡️</div>
+          <div class="highlight-info">
+            <h4>Teknologi Higienis</h4>
+            <p>Diproses otomatis tanpa sentuhan tangan manusia dengan standar clean-room.</p>
+          </div>
+        </div>
+
+        <div class="highlight-card reveal delay-2">
+          <div class="highlight-icon-box">⚡</div>
+          <div class="highlight-info">
+            <h4>Kaya Mineral Esensial</h4>
+            <p>Mengandung Kalsium, Magnesium, dan Kalium untuk metabolisme tubuh prima.</p>
+          </div>
+        </div>
+
+        <div class="highlight-card reveal delay-3">
+          <div class="highlight-icon-box">🚚</div>
+          <div class="highlight-info">
+            <h4>Distribusi Terpercaya</h4>
+            <p>Jaringan suplai cepat & handal didukung oleh PT. Tirta Boga Mega Kreasi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT & SOURCE STORY (GUNUNG CIREMAI & PERUSAHAAN)
+       ========================================================================= -->
+  <section class="story-section" id="tentang">
+    <div class="container">
+      <div class="story-grid">
+        <!-- Visual Story -->
+        <div class="story-visual reveal">
+          <img src="/assets/images/ciremai-spring.jpg" alt="Mata Air Alami Gunung Ciremai Kuningan" class="story-img">
+          <div class="story-overlay-card">
+            <div class="story-overlay-icon">⛰️</div>
+            <div>
+              <h4 style="font-size: 1.05rem; font-weight: 800;">Ekosistem Alam Ciremai</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Tersaring alami melalui lapisan batuan vulkanis murni selama bertahun-tahun.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Content -->
+        <div class="story-content reveal delay-2">
+          <span class="section-tag">Warisan Alam & Kualitas</span>
+          <h2>Kisah Kemurnian dari Kaki <span class="gradient-text">Gunung Ciremai</span></h2>
+          <p>
+            Kabupaten Kuningan di Jawa Barat dikenal memiliki kekayaan alam mata air pegunungan yang sangat murni. <strong>A²mils</strong> lahir dari komitmen menghadirkan air minum dalam kemasan berkualitas tinggi yang menjaga keaslian cita rasa segar dan kandungan mineral alaminya.
+          </p>
+          <p>
+            Diproduksi secara profesional oleh <strong>CV. Surya Nedika Isabella</strong> di Kuningan dan didistribusikan secara strategis oleh <strong>PT. Tirta Boga Mega Kreasi</strong> di Indramayu, kami mengintegrasikan teknologi modern demi memastikan setiap tetes air yang sampai ke tangan Anda terbebas dari kontaminan.
+          </p>
+
+          <div class="company-badges-list">
+            <div class="company-badge-item">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <div>
+                <strong>Produsen Resmi</strong>
+                <span>CV. Surya Nedika Isabella, Kuningan (45554)</span>
+              </div>
+            </div>
+
+            <div class="company-badge-item">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              <div>
+                <strong>Distributor Utama</strong>
+                <span>PT. Tirta Boga Mega Kreasi, Indramayu (45282)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PURIFICATION PROCESS (7 STAGES)
+       ========================================================================= -->
+  <section class="process-section" id="proses">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Higienitas & Teknologi</span>
+        <h2 class="section-title">7 Tahap <span class="gradient-text">Pemurnian Mutakhir</span></h2>
+        <p class="section-desc">Setiap tetes A²mils melewati serangkaian filtrasi dan sterilisasi canggih untuk menjamin kemurnian tanpa merusak kandungan mineral alami.</p>
+      </div>
+
+      <div class="process-stepper-grid">
+        <div class="process-step-card reveal delay-1">
+          <span class="step-number">01</span>
+          <div class="step-icon-wrap">🏔️</div>
+          <h4>Pencadangan Sumber Alami</h4>
+          <p>Pengambilan air dari kedalaman sumber mata air vulkanik yang terlindung dari polusi permukaan.</p>
+        </div>
+
+        <div class="process-step-card reveal delay-2">
+          <span class="step-number">02</span>
+          <div class="step-icon-wrap">🧪</div>
+          <h4>Multi-Media Filtration</h4>
+          <p>Penyaringan partikel kasar melalui pasir silika bermutu tinggi untuk kejernihan maksimal.</p>
+        </div>
+
+        <div class="process-step-card reveal delay-3">
+          <span class="step-number">03</span>
+          <div class="step-icon-wrap">🌑</div>
+          <h4>Karbon Aktif Organik</h4>
+          <p>Menghilangkan bau, rasa, dan sisa bahan organik sehingga menghasilkan air yang netral dan segar.</p>
+        </div>
+
+        <div class="process-step-card reveal delay-4">
+          <span class="step-number">04</span>
+          <div class="step-icon-wrap">🔬</div>
+          <h4>Mikro-Filtrasi 0.1 Micron</h4>
+          <p>Penyaringan mikro untuk menyaring mikroorganisme renik dengan membran ultra-halus.</p>
+        </div>
+
+        <div class="process-step-card reveal delay-1">
+          <span class="step-number">05</span>
+          <div class="step-icon-wrap">⚡</div>
+          <h4>Ozonisasi Terkendali (O₃)</h4>
+          <p>Sterilisasi kuat menggunakan ozon aktif yang mengeliminasi bakteri dan virus secara instan.</p>
+        </div>
+
+        <div class="process-step-card reveal delay-2">
+          <span class="step-number">06</span>
+          <div class="step-icon-wrap">☀️</div>
+          <h4>Sterilisasi Sinar UV</h4>
+          <p>Penyinaran ultraviolet intensitas tinggi sebagai proteksi lapis ganda sebelum pengemasan.</p>
+        </div>
+
+        <div class="process-step-card reveal delay-3">
+          <span class="step-number">07</span>
+          <div class="step-icon-wrap">🤖</div>
+          <h4>Automated Clean Bottling</h4>
+          <p>Pengisian & penyegelan botol/cup otomatis di ruang steril bertekanan positif bebas debu.</p>
+        </div>
+
+        <div class="process-step-card reveal delay-4" style="background: linear-gradient(135deg, rgba(0, 139, 158, 0.1), rgba(0, 225, 217, 0.15)); border-color: var(--primary);">
+          <span class="step-number">QC</span>
+          <div class="step-icon-wrap" style="background: var(--primary); color: #ffffff;">✓</div>
+          <h4>Uji Lab Berkala</h4>
+          <p>Pengujian ketat parameter fisik, kimia, dan mikrobiologi di laboratorium internal & BPOM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS SHOWCASE & CATALOG
+       ========================================================================= -->
+  <section class="products-section" id="produk">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Koleksi Produk</span>
+        <h2 class="section-title">Varian Kemasan <span class="gradient-text">A²mils</span></h2>
+        <p class="section-desc">Dirancang untuk memenuhi segala kebutuhan hidrasi Anda, mulai dari kemasan gelas praktis untuk acara hajatan & katering hingga botol hidrasi harian aktif.</p>
+      </div>
+
+      <!-- Category Filter Bar -->
+      <div class="product-filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">Semua Varian</button>
+        <button class="filter-btn" data-filter="cup">Gelas (Cup)</button>
+        <button class="filter-btn" data-filter="bottle">Botol Mineral</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+        <!-- 1. Cup 220ml -->
+        <div class="product-card reveal delay-1" data-category="cup" id="card-cup-220ml">
+          <span class="product-badge-tag">Varian Praktis</span>
+          <div class="product-img-holder">
+            <img src="/assets/images/cup-220ml.png" alt="A²mils Cup 220 ml" loading="lazy">
+          </div>
+          <div class="product-info-block">
+            <h3 class="product-title">A²mils Gelas 220 ml</h3>
+            <p class="product-sub">Pilihan utama untuk hajatan, rapat dinas, pengajian, katering & konsumsi massal.</p>
+            <div class="product-spec-list">
+              <div class="spec-row">
+                <span class="spec-key">Isi Bersih:</span>
+                <span class="spec-val">220 ml</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Kemasan Dus:</span>
+                <span class="spec-val">48 Cup / Dus</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Sertifikasi:</span>
+                <span class="spec-val">BPOM, SNI & Halal</span>
+              </div>
+            </div>
+            <div class="product-card-actions">
+              <button class="btn-card-order" data-product="cup-220ml">
+                Pesan Dus
+              </button>
+              <button class="btn-card-detail" data-product="cup-220ml" title="Lihat Detail Produk">
+                Info Detail
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Botol 330ml -->
+        <div class="product-card reveal delay-2" data-category="bottle" id="card-bottle-330ml">
+          <span class="product-badge-tag">Varian Kompak</span>
+          <div class="product-img-holder">
+            <img src="/assets/images/bottle-330ml.png" alt="A²mils Botol 330 ml" loading="lazy">
+          </div>
+          <div class="product-info-block">
+            <h3 class="product-title">A²mils Botol 330 ml</h3>
+            <p class="product-sub">Desain botol mini ringkas & elegan, pas di tas seminar, hotel, resto & perjalanan.</p>
+            <div class="product-spec-list">
+              <div class="spec-row">
+                <span class="spec-key">Isi Bersih:</span>
+                <span class="spec-val">330 ml</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Kemasan Dus:</span>
+                <span class="spec-val">24 Botol / Dus</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Sertifikasi:</span>
+                <span class="spec-val">BPOM, SNI & Halal</span>
+              </div>
+            </div>
+            <div class="product-card-actions">
+              <button class="btn-card-order" data-product="bottle-330ml">
+                Pesan Dus
+              </button>
+              <button class="btn-card-detail" data-product="bottle-330ml" title="Lihat Detail Produk">
+                Info Detail
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Botol 600ml -->
+        <div class="product-card reveal delay-3" data-category="bottle" id="card-bottle-600ml">
+          <span class="product-badge-tag" style="background: rgba(250, 204, 21, 0.15); color: #d97706; border-color: rgba(250, 204, 21, 0.4);">Best Seller</span>
+          <div class="product-img-holder">
+            <img src="/assets/images/bottle-600ml.png" alt="A²mils Botol 600 ml" loading="lazy">
+          </div>
+          <div class="product-info-block">
+            <h3 class="product-title">A²mils Botol 600 ml</h3>
+            <p class="product-sub">Varian terpopuler dengan lekukan grip eksklusif untuk olahraga & aktivitas harian.</p>
+            <div class="product-spec-list">
+              <div class="spec-row">
+                <span class="spec-key">Isi Bersih:</span>
+                <span class="spec-val">600 ml</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Kemasan Dus:</span>
+                <span class="spec-val">24 Botol / Dus</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Sertifikasi:</span>
+                <span class="spec-val">BPOM, SNI & Halal</span>
+              </div>
+            </div>
+            <div class="product-card-actions">
+              <button class="btn-card-order" data-product="bottle-600ml">
+                Pesan Dus
+              </button>
+              <button class="btn-card-detail" data-product="bottle-600ml" title="Lihat Detail Produk">
+                Info Detail
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DAILY HYDRATION CALCULATOR WIDGET
+       ========================================================================= -->
+  <section class="calculator-section" id="kalkulator">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Kalkulator Cerdas</span>
+        <h2 class="section-title">Hitung Kebutuhan <span class="gradient-text">Hidrasi Harian Anda</span></h2>
+        <p class="section-desc">Ketahui volume air mineral yang ideal bagi tubuh Anda berdasarkan berat badan dan intensitas aktivitas harian.</p>
+      </div>
+
+      <div class="calc-box-card reveal">
+        <!-- Input Panel -->
+        <div class="calc-input-panel">
+          <div class="calc-form-group">
+            <div class="calc-label-row">
+              <span class="calc-label-text">Berat Badan Anda</span>
+              <span class="calc-value-display" id="calc-weight-val">65 kg</span>
+            </div>
+            <input type="range" min="30" max="130" value="65" class="calc-slider" id="calc-weight-slider">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.5rem;">
+              <span>30 kg</span>
+              <span>80 kg</span>
+              <span>130 kg</span>
+            </div>
+          </div>
+
+          <div class="calc-form-group">
+            <div class="calc-label-row">
+              <span class="calc-label-text">Tingkat Aktivitas Harian</span>
+            </div>
+            <div class="activity-options-grid">
+              <button type="button" class="activity-opt-btn active" data-factor="1.0" data-name="Santai">
+                <span>🧘</span>
+                <span>Santai / Sedentari</span>
+              </button>
+              <button type="button" class="activity-opt-btn" data-factor="1.2" data-name="Sedang">
+                <span>🚶</span>
+                <span>Aktivitas Sedang</span>
+              </button>
+              <button type="button" class="activity-opt-btn" data-factor="1.45" data-name="Sangat Aktif">
+                <span>🏃</span>
+                <span>Sangat Aktif / Atlet</span>
+              </button>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-surface-elevated); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <h5 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--primary);">💡 Tips Hidrasi:</h5>
+            <p id="calc-health-tip" style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted);">
+              Cukupi kebutuhan air mineral A²mils setiap hari untuk menjaga metabolisme tubuh dan kelembapan kulit alami.
+            </p>
+          </div>
+        </div>
+
+        <!-- Result Panel -->
+        <div class="calc-result-panel">
+          <div class="result-target-box">
+            <div class="result-target-label">Target Asupan Air Harian</div>
+            <div class="result-liters-num" id="calc-res-liters">
+              2.5 <span>L / Hari</span>
+            </div>
+            <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); margin-top: 0.4rem;">
+              Setara dengan rekomendasi medis untuk iklim tropis Indonesia.
+            </p>
+          </div>
+
+          <div class="recommendations-breakdown">
+            <div class="rec-item">
+              <div class="rec-info">
+                <span>🧴</span>
+                <span>A²mils Botol 600 ml</span>
+              </div>
+              <span class="rec-count" id="calc-res-600ml">4 Botol</span>
+            </div>
+
+            <div class="rec-item">
+              <div class="rec-info">
+                <span>🥤</span>
+                <span>A²mils Botol 330 ml</span>
+              </div>
+              <span class="rec-count" id="calc-res-330ml">8 Botol</span>
+            </div>
+
+            <div class="rec-item">
+              <div class="rec-info">
+                <span>🥛</span>
+                <span>A²mils Gelas 220 ml</span>
+              </div>
+              <span class="rec-count" id="calc-res-220ml">12 Gelas</span>
+            </div>
+          </div>
+
+          <a href="#kemitraan" class="btn-primary" style="background: var(--accent-yellow); color: #061318; justify-content: center; font-weight: 800; border: none;">
+            Pesan Stok Air Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MINERAL COMPOSITION & HEALTH BENEFITS
+       ========================================================================= -->
+  <section class="minerals-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Komposisi Seimbang</span>
+        <h2 class="section-title">Kaya Mineral <span class="gradient-text">Alami Bermanfaat</span></h2>
+        <p class="section-desc">Kandungan mineral anorganik alami dari batuan Ciremai yang mudah diserap oleh tubuh manusia.</p>
+      </div>
+
+      <div class="minerals-grid">
+        <div class="mineral-card reveal delay-1">
+          <div class="mineral-header">
+            <span class="mineral-formula">Ca²⁺</span>
+            <span class="mineral-level">Kalsium Alami</span>
+          </div>
+          <h4>Kesehatan Tulang & Gigi</h4>
+          <p>Membantu menjaga kepadatan tulang, mencegah osteoporosis dini, dan mengoptimalkan fungsi kontraksi otot.</p>
+        </div>
+
+        <div class="mineral-card reveal delay-2">
+          <div class="mineral-header">
+            <span class="mineral-formula">Mg²⁺</span>
+            <span class="mineral-level">Magnesium</span>
+          </div>
+          <h4>Fungsi Jantung & Saraf</h4>
+          <p>Berperan penting dalam relaksasi otot, mendukung irama detak jantung normal, serta mengurangi stres dan kram.</p>
+        </div>
+
+        <div class="mineral-card reveal delay-3">
+          <div class="mineral-header">
+            <span class="mineral-formula">K⁺</span>
+            <span class="mineral-level">Kalium</span>
+          </div>
+          <h4>Keseimbangan Elektrolit</h4>
+          <p>Mengatur keseimbangan cairan intraseluler dan membantu mengontrol tekanan darah tetap stabil.</p>
+        </div>
+
+        <div class="mineral-card reveal delay-1">
+          <div class="mineral-header">
+            <span class="mineral-formula">Na⁺</span>
+            <span class="mineral-level">Natrium Seimbang</span>
+          </div>
+          <h4>Transmisi Impuls Syaraf</h4>
+          <p>Kadar natrium terkontrol yang aman untuk konsumsi harian tanpa memicu hipertensi.</p>
+        </div>
+
+        <div class="mineral-card reveal delay-2">
+          <div class="mineral-header">
+            <span class="mineral-formula">HCO₃⁻</span>
+            <span class="mineral-level">Bikarbonat</span>
+          </div>
+          <h4>Netralisir Asam Lambung</h4>
+          <p>Membantu menjaga keseimbangan pH asam lambung dan melancarkan sistem pencernaan.</p>
+        </div>
+
+        <div class="mineral-card reveal delay-3">
+          <div class="mineral-header">
+            <span class="mineral-formula" style="background: rgba(0, 225, 217, 0.15); color: var(--primary-dark);">pH 7.8</span>
+            <span class="mineral-level">Alami Stabil</span>
+          </div>
+          <h4>Keseimbangan pH Tubuh</h4>
+          <p>Tingkat keasaman basa ringan alami yang menyegarkan tenggorokan dan menghidrasi lebih cepat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CERTIFICATIONS & LEGALITY
+       ========================================================================= -->
+  <section class="certifications-section" id="sertifikasi">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Jaminan Kualitas</span>
+        <h2 class="section-title">Sertifikasi & <span class="gradient-text">Legalitas Resmi</span></h2>
+        <p class="section-desc">Kualitas A²mils telah terverifikasi secara resmi oleh otoritas keamanan pangan dan standar mutu nasional Indonesia.</p>
+      </div>
+
+      <div class="certs-row">
+        <div class="cert-badge-box reveal delay-1">
+          <div class="cert-stamp-icon">🛡️</div>
+          <h4>BPOM RI MD</h4>
+          <span class="cert-code">MD 265228006191</span>
+          <p>Terdaftar resmi di Badan Pengawas Obat dan Makanan Republik Indonesia, aman dan layak konsumsi.</p>
+        </div>
+
+        <div class="cert-badge-box reveal delay-2">
+          <div class="cert-stamp-icon">⭐</div>
+          <h4>SNI Standar Nasional</h4>
+          <span class="cert-code">SNI 3553:2015</span>
+          <p>Memenuhi seluruh parameter baku mutu fisika, kimiawi, dan mikrobiologis Air Mineral Dalam Kemasan.</p>
+        </div>
+
+        <div class="cert-badge-box reveal delay-3">
+          <div class="cert-stamp-icon">🌙</div>
+          <h4>Sertifikat Halal</h4>
+          <span class="cert-code">HALAL INDONESIA</span>
+          <p>Proses produksi 100% halal, suci, dan thoyyib sesuai syariat Islam dari hulu hingga hilir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PARTNERSHIP & DISTRIBUTION QUOTATION BUILDER
+       ========================================================================= -->
+  <section class="partnership-section" id="kemitraan">
+    <div class="container">
+      <div class="partnership-grid">
+        <!-- Distribution Network Info -->
+        <div class="partner-info-box reveal">
+          <span class="section-tag">Jaringan Distribusi & Kemitraan</span>
+          <h2>Bermitra Bersama <span class="gradient-text">A²mils</span></h2>
+          <p>
+            Kami membuka peluang kemitraan bagi agen grosir, distributor daerah, toko retail, perhotelan, restoran, katering, serta kebutuhan pasokan kantor & event di wilayah Kuningan, Indramayu, Cirebon, Majalengka (Ciayumajakuning), dan seluruh Jawa Barat.
+          </p>
+
+          <div class="partner-dist-cards">
+            <div class="dist-card">
+              <div class="dist-card-icon">🏭</div>
+              <div class="dist-card-info">
+                <h4>Fasilitas Produksi (Pabrik)</h4>
+                <p><strong>CV. Surya Nedika Isabella</strong><br>Kuningan, Jawa Barat (Kode Pos 45554) - Indonesia</p>
+              </div>
+            </div>
+
+            <div class="dist-card">
+              <div class="dist-card-icon">🚛</div>
+              <div class="dist-card-info">
+                <h4>Pusat Distribusi & Logistik</h4>
+                <p><strong>PT. Tirta Boga Mega Kreasi</strong><br>Indramayu, Jawa Barat (Kode Pos 45282) - Indonesia</p>
+              </div>
+            </div>
+
+            <div class="dist-card">
+              <div class="dist-card-icon">💼</div>
+              <div class="dist-card-info">
+                <h4>Keuntungan Menjadi Mitra / Agen</h4>
+                <p>Harga distributor kompetitif, pasokan rutin terjamin, gratis ongkir untuk kuota tertentu, dan dukungan materi promosi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form & WhatsApp Quotation Generator -->
+        <div class="order-builder-form reveal delay-2">
+          <h3>Simulasi Pesanan & Inquiry Kemitraan</h3>
+          <p class="form-sub">Isi form di bawah ini untuk terhubung langsung dengan tim sales A²mils melalui WhatsApp resmi.</p>
+
+          <form id="partnership-order-form">
+            <div class="form-input-group">
+              <label class="form-label" for="order-name-input">Nama Lengkap / PIC *</label>
+              <input type="text" id="order-name-input" class="form-control" placeholder="Contoh: Bpk. Hendra Gunawan" required>
+            </div>
+
+            <div class="form-input-group">
+              <label class="form-label" for="order-phone-input">Nomor WhatsApp *</label>
+              <input type="tel" id="order-phone-input" class="form-control" placeholder="Contoh: 082115886482" required>
+            </div>
+
+            <div class="form-input-group">
+              <label class="form-label" for="order-city-input">Kota / Kabupaten Pengiriman *</label>
+              <input type="text" id="order-city-input" class="form-control" placeholder="Contoh: Kuningan / Cirebon / Indramayu" required>
+            </div>
+
+            <div class="form-input-group">
+              <label class="form-label" for="order-type-select">Jenis Kebutuhan / Kemitraan</label>
+              <select id="order-type-select" class="form-control">
+                <option value="distributor">Peluang Distributor / Agen Grosir</option>
+                <option value="horeca">Pasokan Hotel / Restoran / Kafe (Horeca)</option>
+                <option value="event">Pemesanan Hajatan / Event / Katering</option>
+                <option value="kantor">Kebutuhan Rutin Perkantoran / Instansi</option>
+                <option value="retail">Toko Retail / Warung</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 1rem;">
+              <div class="form-input-group">
+                <label class="form-label" for="order-product-select">Varian Produk</label>
+                <select id="order-product-select" class="form-control">
+                  <option value="cup-220ml">A²mils Gelas 220 ml (Dus isi 48)</option>
+                  <option value="bottle-330ml">A²mils Botol 330 ml (Dus isi 24)</option>
+                  <option value="bottle-600ml">A²mils Botol 600 ml (Dus isi 24)</option>
+                  <option value="mixed">Paket Campuran (Mixed Variants)</option>
+                </select>
+              </div>
+
+              <div class="form-input-group">
+                <label class="form-label" for="order-qty-input">Estimasi Dus/Qty</label>
+                <input type="number" id="order-qty-input" class="form-control" min="1" value="50">
+              </div>
+            </div>
+
+            <div class="form-input-group">
+              <label class="form-label" for="order-note-input">Catatan Tambahan (Opsional)</label>
+              <textarea id="order-note-input" class="form-control" rows="2" placeholder="Tuliskan jika ada kebutuhan khusus atau jadwal pengiriman..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-send-whatsapp" id="btn-submit-order-wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.062-2.122-.533-1.688-.702-2.775-2.42-2.859-2.533-.084-.114-.683-.908-.683-1.731 0-.823.429-1.229.582-1.397.153-.168.333-.211.444-.211.111 0 .222 0 .319.006.104.005.244-.04.382.292.144.348.486 1.189.528 1.275.042.086.07.186.014.299-.055.112-.083.183-.166.279-.083.097-.174.216-.248.29-.084.084-.172.176-.074.345.097.169.433.714.928 1.155.637.568 1.173.744 1.341.828.168.084.266.07.366-.042.101-.113.433-.505.548-.678.114-.173.228-.144.383-.086.155.057.986.465 1.155.55.169.085.281.127.323.197.042.07.042.408-.102.813z"/>
+              </svg>
+              Kirim Inquiry ke WhatsApp Sales
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FREQUENTLY ASKED QUESTIONS (FAQ)
+       ========================================================================= -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Tanya Jawab</span>
+        <h2 class="section-title">Pertanyaan <span class="gradient-text">Sering Diajukan</span></h2>
+        <p class="section-desc">Jawaban lengkap seputar produk, kualitas, pengiriman, dan kemitraan A²mils.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Dari mana sumber air alami A²mils berasal?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Air mineral A²mils bersumber langsung dari mata air alami pegunungan di kawasan lereng Gunung Ciremai, Kabupaten Kuningan, Jawa Barat. Sumber air berada di area konservasi terlindung yang terbebas dari kontaminasi industri dan pemukiman.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Apakah produk A²mils sudah memiliki izin edar resmi BPOM dan Halal?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Ya, seluruh produk A²mils telah mengantongi izin edar resmi BPOM RI MD 265228006191, sertifikat Standar Nasional Indonesia (SNI 3553:2015), dan telah tersertifikasi Halal oleh BPJPH / MUI.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Bagaimana cara menjadi agen atau distributor resmi A²mils di daerah saya?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Anda dapat mengisi form simulasi kemitraan di website ini atau langsung menghubungi kontak sales PT. Tirta Boga Mega Kreasi. Tim kami akan memberikan penawaran harga grosir khusus, katalog produk, dan mekanisme pengiriman armada logistik kami.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Berapa minimal order (MOQ) untuk pemesanan hajatan atau katering?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Untuk kebutuhan hajatan, pengajian, atau katering di wilayah Kuningan, Indramayu, Cirebon, dan Majalengka, pemesanan dapat dilayani mulai dari puluhan dus dengan pengantaran langsung ke lokasi acara.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Mengapa rasa air A²mils terasa lebih segar dan ringan?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>A²mils memiliki Total Dissolved Solids (TDS) yang ideal dan pH alami seimbang 7.8, serta diproses menggunakan teknologi micro-filtration dan ozonisasi tanpa bahan kimia tambahan, sehingga menghasilkan kesegaran alami yang khas dan murni.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <img src="/assets/images/logo-a2mils.png" alt="A²mils Logo" style="height: 48px; width: auto; margin-bottom: 1rem;">
+          <p>
+            <strong>A²mils</strong> - Air Minum Dalam Kemasan alami pegunungan berkualitas tinggi. Menghadirkan kesegaran murni Gunung Ciremai untuk gaya hidup sehat masyarakat Indonesia.
+          </p>
+          <div style="display: flex; gap: 0.5rem; color: var(--primary); font-size: 0.85rem; font-weight: 700;">
+            <span>BPOM RI MD</span> • <span>SNI 3553:2015</span> • <span>HALAL INDONESIA</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#proses">Proses Pemurnian</a></li>
+            <li><a href="#produk">Katalog Produk</a></li>
+            <li><a href="#kalkulator">Kalkulator Hidrasi</a></li>
+            <li><a href="#sertifikasi">Legalitas & Mutu</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="footer-col">
+          <h4>Varian Produk</h4>
+          <ul class="footer-links">
+            <li><a href="#produk">A²mils Cup 220 ml</a></li>
+            <li><a href="#produk">A²mils Botol 330 ml</a></li>
+            <li><a href="#produk">A²mils Botol 600 ml</a></li>
+            <li><a href="#kemitraan">Paket Kemitraan Agen</a></li>
+          </ul>
+        </div>
+
+        <!-- Locations & Producer -->
+        <div class="footer-col">
+          <h4>Kontak & Lokasi</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 0.75rem;">
+            <strong>Produsen:</strong><br>
+            CV. Surya Nedika Isabella<br>
+            Kuningan (45554), Jawa Barat
+          </p>
+          <p style="font-size: 0.88rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 0.75rem;">
+            <strong>Distributor:</strong><br>
+            PT. Tirta Boga Mega Kreasi<br>
+            Indramayu (45282), Jawa Barat
+          </p>
+          <p style="font-size: 0.88rem; line-height: 1.6; color: var(--text-muted);">
+            <strong>Layanan Pelanggan:</strong><br>
+            WhatsApp: +62 821-1588-6482<br>
+            Email: sales@a2mils.co.id
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>A²mils (Air Mineral Alami)</strong>. All Rights Reserved. Diproduksi oleh CV. Surya Nedika Isabella & Didistribusikan oleh PT. Tirta Boga Mega Kreasi.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-subtle);">Kebijakan Privasi</a>
+          <a href="#" style="color: var(--text-subtle);">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       PRODUCT DETAIL MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Tutup Detail Produk">✕</button>
+      <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 2rem; align-items: center;">
+        <div style="display: flex; justify-content: center; align-items: center; background: var(--bg-surface-elevated); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
+          <img id="modal-img" src="" alt="" style="max-height: 260px; width: auto; object-fit: contain;">
+        </div>
+        <div>
+          <span class="section-tag" style="margin-bottom: 0.5rem;" id="modal-tagline">Tagline</span>
+          <h3 id="modal-title" style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem;">Product Name</h3>
+          <p id="modal-desc" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 1.25rem;">Description</p>
+          
+          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Kemasan:</span>
+              <strong id="modal-spec-pack" style="color: var(--text-main);">-</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Nomor Izin:</span>
+              <strong id="modal-spec-bpom" style="color: var(--primary);">-</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Standar Mutu:</span>
+              <strong id="modal-spec-sni" style="color: var(--text-main);">-</strong>
+            </div>
+          </div>
+
+          <ul id="modal-highlights" style="list-style: none; display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          </ul>
+
+          <button id="modal-order-btn" class="btn-primary" style="width: 100%; justify-content: center;">
+            Pesan Varian Ini
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FLOATING WHATSAPP BUTTON
+       ========================================================================= -->
+  <a href="https://wa.me/6282115886482?text=Halo%20Sales%20A2mils,%20saya%20ingin%20bertanya%20mengenai%20pemesanan%20dan%20kemitraan%20produk%20Air%20Mineral%20A2mils." target="_blank" class="floating-wa-btn" id="floating-wa-btn" title="Chat Sales via WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.062-2.122-.533-1.688-.702-2.775-2.42-2.859-2.533-.084-.114-.683-.908-.683-1.731 0-.823.429-1.229.582-1.397.153-.168.333-.211.444-.211.111 0 .222 0 .319.006.104.005.244-.04.382.292.144.348.486 1.189.528 1.275.042.086.07.186.014.299-.055.112-.083.183-.166.279-.083.097-.174.216-.248.29-.084.084-.172.176-.074.345.097.169.433.714.928 1.155.637.568 1.173.744 1.341.828.168.084.266.07.366-.042.101-.113.433-.505.548-.678.114-.173.228-.144.383-.086.155.057.986.465 1.155.55.169.085.281.127.323.197.042.07.042.408-.102.813z"/>
+    </svg>
+  </a>
+
+  <!-- Main JavaScript Module -->
+  <script type="module" src="/src/js/app.js"></script>
+</body>
+</html>
