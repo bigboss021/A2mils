@@ -8,6 +8,7 @@ Website profil perusahaan modern, estetik, dan interaktif untuk brand **A²mils*
 
 ## 🏢 Informasi Perusahaan & Legalitas
 - **Distributor Utama**: PT. Tirta Boga Mega Kreasi, Indramayu (45282), Jawa Barat, Indonesia
+- **Wilayah Pengiriman**: Khusus Wilayah Kabupaten Indramayu & Sekitarnya
 - **Sumber & Pengolahan**: Kuningan (45554), Jawa Barat, Indonesia
 - **Nomor Izin Edar**: **BPOM RI MD 265228006191**
 - **Standar Mutu**: **SNI 3553:2015**

@@ -26,7 +26,7 @@ export function initOrderGenerator() {
     const note = noteInput ? noteInput.value.trim() : '';
 
     if (!name || !city) {
-      alert('Mohon lengkapi Nama dan Kota/Lokasi pengiriman Anda.');
+      alert('Mohon lengkapi Nama dan Kecamatan/Lokasi pengiriman Anda di wilayah Indramayu.');
       return;
     }
 
@@ -35,7 +35,7 @@ export function initOrderGenerator() {
     message += `Saya tertarik untuk melakukan pemesanan / mengajukan kemitraan produk Air Mineral A²mils dengan rincian berikut:\n\n`;
     message += `👤 *Nama:* ${name}\n`;
     message += `📱 *No. WhatsApp:* ${phone || '-'}\n`;
-    message += `📍 *Kota / Wilayah:* ${city}\n`;
+    message += `📍 *Lokasi Pengiriman (Indramayu):* ${city}\n`;
     message += `💼 *Jenis Kemitraan:* ${type}\n`;
     message += `📦 *Produk Diminati:* ${product}\n`;
     message += `🔢 *Estimasi Jumlah:* ${qty} Dus / Unit\n`;
