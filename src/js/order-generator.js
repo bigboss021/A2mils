@@ -31,7 +31,7 @@ export function initOrderGenerator() {
     }
 
     // Compose formatted WhatsApp Message
-    let message = `*HALO TIM SALES A²MILS (CV. SURYA NEDIKA ISABELLA / PT. TIRTA BOGA MEGA KREASI)*\n\n`;
+    let message = `*HALO TIM SALES A²MILS (PT. TIRTA BOGA MEGA KREASI)*\n\n`;
     message += `Saya tertarik untuk melakukan pemesanan / mengajukan kemitraan produk Air Mineral A²mils dengan rincian berikut:\n\n`;
     message += `👤 *Nama:* ${name}\n`;
     message += `📱 *No. WhatsApp:* ${phone || '-'}\n`;
