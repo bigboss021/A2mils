@@ -6,6 +6,7 @@ import { initWaterCanvas } from './water-canvas.js';
 import { initHydrationCalculator } from './calculator.js';
 import { initProductInteractions } from './product-modal.js';
 import { initOrderGenerator } from './order-generator.js';
+import { initDistributionChecker } from './distribution-checker.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Interactive Water Canvas
@@ -17,22 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Initialize Product Catalog & Modals
   initProductInteractions();
 
-  // 4. Initialize WhatsApp Order Builder
+  // 4. Initialize Distribution Area Checker
+  initDistributionChecker();
+
+  // 5. Initialize WhatsApp Order Builder
   initOrderGenerator();
 
-  // 5. Theme Toggle Logic (Light / Ocean Deep Dark Mode)
+  // 6. Theme Toggle Logic (Light / Ocean Deep Dark Mode)
   initThemeToggle();
 
-  // 6. Sticky Navbar & Mobile Navigation
+  // 7. Sticky Navbar & Mobile Navigation
   initNavbar();
 
-  // 7. FAQ Accordion Interaction
+  // 8. FAQ Accordion Interaction
   initFAQAccordion();
 
-  // 8. Scroll Reveal Animations
+  // 9. Scroll Reveal Animations
   initScrollReveal();
 
-  // 9. Button Ripple Effect
+  // 10. Button Ripple Effect
   initRippleEffects();
 });
 
