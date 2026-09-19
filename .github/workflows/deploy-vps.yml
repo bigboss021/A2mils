@@ -1,0 +1,81 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: a2mils-vps-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
+
+      - name: Configure SSH
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$VPS_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
+
+      - name: Package website
+        run: tar -czf /tmp/a2mils-site.tar.gz -C dist .
+
+      - name: Upload build to VPS
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+        run: |
+          scp /tmp/a2mils-site.tar.gz "$VPS_USER@$VPS_HOST:/home/$VPS_USER/a2mils-site.tar.gz"
+
+      - name: Publish website
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+        run: |
+          ssh "$VPS_USER@$VPS_HOST" '
+            set -eu
+            TARGET=/var/www/a2milsmineralwater.store
+            ARCHIVE="$HOME/a2mils-site.tar.gz"
+            TMPDIR="$(mktemp -d)"
+
+            tar -xzf "$ARCHIVE" -C "$TMPDIR"
+
+            find "$TARGET" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+            cp -a "$TMPDIR"/. "$TARGET"/
+
+            rm -rf "$TMPDIR"
+            rm -f "$ARCHIVE"
+          '
+
+      - name: Verify website
+        run: |
+          curl --fail --silent --show-error \
+            --location \
+            --retry 5 \
+            --retry-delay 3 \
+            https://a2milsmineralwater.store/ > /dev/null
